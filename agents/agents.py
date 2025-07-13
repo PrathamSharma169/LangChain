@@ -59,9 +59,7 @@ class SmartAIAgent:
         """Fetches weather using an API (Replace API_KEY with a real one)."""
         city = user_input.split("weather in")[-1].strip()
         api_key = "your_weather_api_key"  # Need to Replace with an actual key
-        url = f"https://api.weatherstack.com/current
-    ? access_key = {api_key}
-    & query = {city}"
+        url = f"https://api.weatherstack.com/current? access_key = {api_key}& query = {city}"
         response = requests.get(url).json()
         if "current" in response:
             temp = response["current"]["temp_c"]
